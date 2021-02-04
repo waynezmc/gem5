@@ -54,7 +54,7 @@ system.clk_domain.voltage_domain = VoltageDomain()
 
 # Set up the system
 system.mem_mode = 'timing'               # Use timing accesses
-system.mem_ranges = [AddrRange('512MB')] # Create an address range
+system.mem_ranges = [AddrRange('512MB')]  # Create an address range
 
 # Create a simple CPU
 system.cpu = TimingSimpleCPU()
@@ -104,7 +104,7 @@ system.cpu.workload = process
 system.cpu.createThreads()
 
 # set up the root SimObject and start the simulation
-root = Root(full_system = False, system = system)
+root = Root(full_system=False, system=system)
 # instantiate all of the objects we've created above
 m5.instantiate()
 
